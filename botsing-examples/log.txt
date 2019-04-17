@@ -1,0 +1,102 @@
+[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for eu.stamp-project:botsing-examples:jar:1.0.5-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.eluder.coveralls:coveralls-maven-plugin is missing. @ eu.stamp-project:botsing:1.0.5-SNAPSHOT, /Users/matt/Development/Projects/botsing/pom.xml, line 272, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -----------------< eu.stamp-project:botsing-examples >------------------
+[INFO] Building botsing-examples 1.0.5-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-cli) @ botsing-examples ---
+[INFO] Deleting /Users/matt/Development/Projects/botsing/botsing-examples/target
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ botsing-examples ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.0.0:checkstyle (default) @ botsing-examples ---
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.3:prepare-agent (default) @ botsing-examples ---
+[INFO] argLine set to -javaagent:/Users/matt/.m2/repository/org/jacoco/org.jacoco.agent/0.8.3/org.jacoco.agent-0.8.3-runtime.jar=destfile=/Users/matt/Development/Projects/botsing/botsing-examples/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ botsing-examples ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ botsing-examples ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /Users/matt/Development/Projects/botsing/botsing-examples/target/classes
+[INFO] 
+[INFO] --- botsing-maven:1.0.5-SNAPSHOT:botsing (default-cli) @ botsing-examples ---
+[INFO] Starting Botsing to generate tests with EvoSuite
+[INFO] 15:04:22.966 [main] INFO  eu.stamp.botsing.StackTrace - Exception type is detected: java.lang.ArithmeticException
+[INFO] 15:04:22.971 [main] INFO  eu.stamp.botsing.StackTrace - Target frame is set to: eu.stamp.botsing.Fraction.getShiftedValue(Fraction:24)
+[INFO] 15:04:22.971 [main] INFO  eu.stamp.botsing.StackTrace - Target Class is set to: eu.stamp.botsing.Fraction
+[INFO] 15:04:23.491 [main] INFO  e.s.b.reproduction.CrashReproduction - Starting the dependency analysis. The number of detected jar files is 4.
+[INFO] 15:04:25.920 [main] INFO  e.s.b.reproduction.CrashReproduction - Analysing dependencies done!
+[INFO] 15:04:25.934 [main] INFO  e.s.b.t.s.BotsingIndividualStrategy - test generation strategy: Botsing individual
+[INFO] 15:04:25.934 [main] INFO  e.s.b.t.s.BotsingIndividualStrategy - The single goal is crash coverage.
+[INFO] 15:04:25.950 [main] INFO  e.s.b.g.s.o.GuidedSearchUtility - Detecting the target method call(s) ...
+[INFO] 15:04:25.950 [main] INFO  e.s.b.g.s.o.GuidedSearchUtility - The target method is public!
+[INFO] 15:04:25.950 [main] INFO  e.s.b.g.s.o.GuidedSearchUtility - The target is a method!
+[INFO] 15:04:25.950 [main] INFO  e.s.b.g.s.o.GuidedSearchUtility - Botsing found 1 Target call(s):
+[INFO] 15:04:25.950 [main] INFO  e.s.b.g.s.o.GuidedSearchUtility - Target method #1 is getShiftedValue
+[INFO] 15:04:25.956 [main] INFO  e.s.b.g.s.GuidedGeneticAlgorithm - Initializing the first population with size of 100 individuals
+[INFO] 15:04:28.207 [main] INFO  e.s.b.g.s.GuidedGeneticAlgorithm - Best fitness in the initial population is: 0.0
+[INFO] 15:04:28.208 [main] INFO  e.s.b.g.s.GuidedGeneticAlgorithm - Best fitness in the final population is: 0.0. PT: 2 seconds
+[INFO] 15:04:28.208 [main] INFO  e.s.b.g.s.GuidedGeneticAlgorithm - Starting evolution
+[INFO] 15:04:28.208 [main] INFO  e.s.b.g.s.GuidedGeneticAlgorithm - ZeroFitness :                      0 / 0            Finished!
+[INFO] 15:04:28.208 [main] INFO  e.s.b.g.s.GuidedGeneticAlgorithm - The search process is finished.
+[INFO] 15:04:28.208 [main] INFO  e.s.b.g.s.GuidedGeneticAlgorithm - Best fitness in the final population is: 0.0. PT: 2 seconds
+[INFO] 15:04:28.210 [main] INFO  e.s.b.t.s.BotsingIndividualStrategy - * The target crash is covered. The generated test is: int int0 = (-1014);
+[INFO] Fraction fraction0 = new Fraction(int0, int0);
+[INFO] int int1 = 2454;
+[INFO] Fraction fraction1 = new Fraction(int0, int1);
+[INFO] fraction1.getValue();
+[INFO] int int2 = 0;
+[INFO] fraction1.getShiftedValue(int2);
+[INFO] int int3 = (-1790);
+[INFO] int int4 = (-1);
+[INFO] Fraction fraction2 = new Fraction(int3, int4);
+[INFO] int int5 = 1;
+[INFO] fraction2.getShiftedValue(int5);
+[INFO] fraction0.getShiftedValue(int3);
+[INFO] int int6 = 0;
+[INFO] fraction0.getShiftedValue(int6);
+[INFO] int int7 = (-2817);
+[INFO] fraction2.getShiftedValue(int7);
+[INFO] int int8 = (-1);
+[INFO] Fraction fraction3 = new Fraction(int8, int1);
+[INFO] int int9 = 479;
+[INFO] int int10 = 0;
+[INFO] Fraction fraction4 = new Fraction(int9, int10);
+[INFO] int int11 = 1;
+[INFO] Fraction fraction5 = new Fraction(int11, int9);
+[INFO] int int12 = (-1709);
+[INFO] int int13 = 0;
+[INFO] Fraction fraction6 = new Fraction(int12, int13);
+[INFO] fraction1.getValue();
+[INFO] int int14 = (-3690);
+[INFO] Fraction fraction7 = new Fraction(int3, int14);
+[INFO] fraction7.getValue();
+[INFO] int int15 = (-1424);
+[INFO] int int16 = 1925;
+[INFO] Fraction fraction8 = new Fraction(int15, int16);
+[INFO] 15:04:28.247 [main] INFO  e.s.b.reproduction.CrashReproduction - * Minimizing test suite
+[INFO] 15:04:28.352 [main] INFO  e.s.b.reproduction.CrashReproduction - * Compiling and checking tests
+[INFO] 15:04:32.068 [main] INFO  e.s.b.reproduction.CrashReproduction - * Writing JUnit test case 'Fraction_ESTest' to crash-reproduction-tests
+[INFO] 15:04:32.116 [main] INFO  e.s.b.reproduction.CrashReproduction - The solution test is saved!
+[INFO] Stopping Botsing
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.991 s
+[INFO] Finished at: 2019-04-17T15:04:32+02:00
+[INFO] ------------------------------------------------------------------------

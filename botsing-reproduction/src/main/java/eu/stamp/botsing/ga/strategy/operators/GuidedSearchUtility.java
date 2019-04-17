@@ -76,7 +76,9 @@ public class GuidedSearchUtility<T extends Chromosome> {
 
         BytecodeInstruction targetInstruction = getTargetInstruction(instructions, targetLine);
 
-        if (!isPrivateMethod(targetInstruction.getActualCFG())){
+        if (targetInstruction == null) {
+            LOG.error("The target instruction not found!");
+        } else if (!isPrivateMethod(targetInstruction.getActualCFG())){
             LOG.info("The target method is public!");
 
             if(fitnessFunctionHelper.isConstructor(targetInstruction)){

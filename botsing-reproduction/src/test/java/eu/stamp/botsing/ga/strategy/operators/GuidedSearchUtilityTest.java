@@ -163,6 +163,15 @@ public class GuidedSearchUtilityTest {
     }
 
     @Test
+    public void testGetPublicCalls_null() {
+        List<BytecodeInstruction> instructions = new ArrayList<>();
+
+        GuidedSearchUtility utility = Mockito.spy(new GuidedSearchUtility());
+        Set calls = utility.getPublicCalls(trace, instructions);
+        assertTrue(calls.isEmpty());
+    }
+
+    @Test
     public void testIncludesPublicCall_falseCase()  {
         BytecodeInstruction stmt = Mockito.mock(BytecodeInstruction.class);
         Mockito.doReturn("java.lang.Integer").when(stmt).getClassName();
